@@ -21,6 +21,7 @@ public class ArtistFrame extends JFrame{
 
         JPanel emptyPanel = new JPanel();
         emptyPanel.setSize(300,400);
+        
          add(emptyPanel, BorderLayout.WEST);
          add(emptyPanel, BorderLayout.EAST);
          add(emptyPanel, BorderLayout.NORTH);
