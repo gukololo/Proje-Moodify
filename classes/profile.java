@@ -32,6 +32,7 @@ public class profile {
         this.followings = followings;
     }
     public ArrayList<Playlist> getPlaylists() {
+        
         return playlists;
     }
     public void setPlaylists(ArrayList<Playlist> playlists) {
