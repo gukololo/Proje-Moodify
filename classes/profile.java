@@ -15,8 +15,10 @@ public class profile {
     protected String password;
     protected String userName;
     protected String mail;
+    protected song recentSong;
 
     //getters and setters
+
     public ArrayList<profile> getFollowers() {
         return followers;
     }
@@ -70,6 +72,12 @@ public class profile {
     }
     public void setMail(String mail) {
         this.mail = mail;
+    }
+    public song getRecentSong() {
+        return recentSong;
+    }
+    public void setRecentSong(song recentSong) {
+        this.recentSong = recentSong;
     }
 
 }
