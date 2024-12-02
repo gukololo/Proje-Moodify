@@ -16,12 +16,6 @@ public class profile {
     protected String userName;
     protected String mail;
 
-
-
-
-
-
-
     //getters and setters
     public ArrayList<profile> getFollowers() {
         return followers;
@@ -77,8 +71,5 @@ public class profile {
     public void setMail(String mail) {
         this.mail = mail;
     }
-
-
-
 
 }
