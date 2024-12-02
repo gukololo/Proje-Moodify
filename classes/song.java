@@ -1,5 +1,7 @@
 package classes;
 
+import javax.swing.ImageIcon;
+
 public class song {
 
     private String songName;
@@ -10,8 +12,9 @@ public class song {
     private int songTempo;
     private int songListened;
     private String album;
+    private ImageIcon songImage;
     // private audio songAudio;
-    
+
     public String getSongName() {
         return songName;
     }
@@ -35,6 +38,9 @@ public class song {
     }
     public String getAlbum() {
         return album;
+    }
+    public ImageIcon getSongImage() {
+        return songImage;
     }
     
 }
