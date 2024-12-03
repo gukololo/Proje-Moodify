@@ -1,6 +1,8 @@
 package classes;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 
 public class Playlist {
@@ -16,6 +18,7 @@ public class Playlist {
     protected int mainMood;
     protected String mainGenre;
     protected profile owner;
+    protected ArrayList<song> songs;
 
     public void addSong(song newSong){
         songs.add(newSong);
