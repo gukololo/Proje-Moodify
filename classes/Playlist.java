@@ -1,7 +1,6 @@
 package classes;
 
 import java.time.LocalDateTime;
-
 import javax.swing.ImageIcon;
 
 public class Playlist {
@@ -17,6 +16,14 @@ public class Playlist {
     protected int mainMood;
     protected String mainGenre;
     protected profile owner;
+
+    public void addSong(song newSong){
+        songs.add(newSong);
+    }
+
+    public void removeSong(song oldSong){
+        songs.add(oldSong);
+    }
 
     //getters and setters
     public int getTotalTime() {
