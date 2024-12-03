@@ -1,5 +1,7 @@
 package classes.Frames.RightPanel;
 
-public class PlayingSongPanel {
+import javax.swing.JPanel;
+
+public class PlayingSongPanel extends JPanel {
     
 }

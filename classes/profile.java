@@ -9,6 +9,7 @@ public class profile {
     protected ArrayList <profile> followers;
     protected ArrayList <profile> followings;
     protected ArrayList <Playlist> playlists;
+    protected ArrayList <Playlist> recentPlaylists;
     protected ImageIcon profilePicture;
     protected int currentMood;
     protected String favoriteGenre;
@@ -16,6 +17,7 @@ public class profile {
     protected String userName;
     protected String mail;
     protected song recentSong;
+    protected Playlist recentPlaylist;
 
     //getters and setters
 
@@ -79,6 +81,18 @@ public class profile {
     }
     public void setRecentSong(song recentSong) {
         this.recentSong = recentSong;
+        
     }
+
+    public void getRecentPlaylist(Playlist recentPlaylist) {
+        this.recentPlaylist = recentPlaylist;
+        recentPlaylists.add(recentPlaylist);
+    }
+
+    public ArrayList<Playlist> getRecentPlaylist() {
+        return recentPlaylists;
+    }
+
+    
 
 }
