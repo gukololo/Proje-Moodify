@@ -2,6 +2,7 @@ package classes;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.swing.ImageIcon;
 
@@ -19,6 +20,42 @@ public class Playlist {
     protected String mainGenre;
     protected profile owner;
     protected ArrayList<song> songs;
+
+    // Finds the most common genre between all songs in the playlist.
+    public String findMainGenre(){
+
+        Random random = new Random();
+        int max = 0;
+        ArrayList<String> mostFrequentGenres = new ArrayList<>();
+
+        for (int i = 0; i < songs.size(); i++) {
+
+            String currentGenre = songs.get(i).getSongGenre();
+            int count = 0;
+            for(int j = 0; j < songs.size(); j++) {
+                
+                if (currentGenre.equals(songs.get(j).getSongGenre())) {
+                    count++;
+                }
+            }
+            if (count > max) {
+                max = count;
+                mostFrequentGenres.clear();
+                mostFrequentGenres.add(currentGenre);
+            }
+            else if (count == max && !mostFrequentGenres.contains(currentGenre)) {
+                mostFrequentGenres.add(currentGenre);
+            }
+        }
+
+        if (mostFrequentGenres.size() > 1) {
+            int select = random.nextInt(mostFrequentGenres.size());
+            return mostFrequentGenres.get(select);
+        }
+        else{
+            return mostFrequentGenres.get(0);
+        }
+    }
 
     public void addSong(song newSong){
         songs.add(newSong);
