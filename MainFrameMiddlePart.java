@@ -3,11 +3,9 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class MoodListApp {
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(MoodListApp::createAndShowGUI);
-    }
+   
 
-    private static void createAndShowGUI() {
+    MoodListApp() {
         
         JFrame frame = new JFrame("Moodlist");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -122,7 +120,5 @@ public class MoodListApp {
         bottomPanel.setBackground(new Color(40, 0, 0));
         bottomPanel.add(createPlaylistButton);
         frame.add(bottomPanel);
-
-        frame.setVisible(true);
     }
 }
