@@ -8,14 +8,14 @@ public class MoodListApp {
     }
 
     private static void createAndShowGUI() {
-        // Ana Frame
+        
         JFrame frame = new JFrame("Moodlist");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 600);
-        frame.setLayout(new BorderLayout());
-        frame.getContentPane().setBackground(new Color(40, 0, 0)); // Koyu kırmızı arka plan
+        frame.setLayout(new GridLayout(4,1));
+        frame.getContentPane().setBackground(new Color(40, 0, 0)); 
 
-        // Üst Arama Çubuğu Paneli
+        
         JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 10));
         searchPanel.setBackground(new Color(40, 0, 0));
         JTextField searchField = new JTextField(20);
@@ -30,7 +30,7 @@ public class MoodListApp {
 
         // İçerik Paneli
         JPanel contentPanel = new JPanel();
-        contentPanel.setLayout(new GridLayout(6, 2, 10, 10));
+        contentPanel.setLayout(new GridLayout(6, 2));
         contentPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
         contentPanel.setBackground(new Color(40, 0, 0));
 
@@ -58,19 +58,29 @@ public class MoodListApp {
         contentPanel.add(danceLabel);
         contentPanel.add(danceSlider);
 
+        JPanel contentPanel2 = new JPanel();
+        contentPanel2.setLayout(new GridLayout(1, 5));
+        contentPanel2.setBorder(new EmptyBorder(20, 20, 20, 20));
+        contentPanel2.setBackground(new Color(40, 0, 0));
+
         // Playlist Name
         JLabel playlistNameLabel = new JLabel("Playlist Name:");
         playlistNameLabel.setForeground(Color.WHITE);
         JTextField playlistNameField = new JTextField();
-        contentPanel.add(playlistNameLabel);
-        contentPanel.add(playlistNameField);
+        contentPanel2.add(playlistNameLabel);
+        contentPanel2.add(playlistNameField);
 
         // Number of Songs
         JLabel numberOfSongsLabel = new JLabel("Number Of Songs:");
         numberOfSongsLabel.setForeground(Color.WHITE);
         JTextField numberOfSongsField = new JTextField();
-        contentPanel.add(numberOfSongsLabel);
-        contentPanel.add(numberOfSongsField);
+        contentPanel2.add(numberOfSongsLabel);
+        contentPanel2.add(numberOfSongsField);
+
+        JPanel contentPanel3 = new JPanel();
+        contentPanel3.setLayout(new GridLayout(3, 1));
+        contentPanel3.setBorder(new EmptyBorder(20, 20, 20, 20));
+        contentPanel3.setBackground(new Color(40, 0, 0));
 
         // Versatile & Public Toggle
         JPanel togglePanel = new JPanel(new GridLayout(1, 2, 10, 0));
@@ -84,15 +94,16 @@ public class MoodListApp {
         togglePanel.add(versatileCheck);
         togglePanel.add(publicCheck);
 
-        contentPanel.add(new JLabel()); // Boşluk
-        contentPanel.add(togglePanel);
+        contentPanel3.add(new JLabel()); // Boşluk
+        contentPanel3.add(togglePanel);
 
         // Upload Photo
         JButton uploadPhotoButton = new JButton("Upload Photo");
         uploadPhotoButton.setForeground(Color.WHITE);
         uploadPhotoButton.setBackground(new Color(60, 20, 20));
-        contentPanel.add(new JLabel()); // Boşluk
-        contentPanel.add(uploadPhotoButton);
+        //contentPanel3.add(new JLabel()); // Boşluk
+        contentPanel3.add(uploadPhotoButton);
+        contentPanel2.add(contentPanel3);
 
         // Create Playlist Butonu
         JButton createPlaylistButton = new JButton("Create Playlist");
@@ -103,14 +114,14 @@ public class MoodListApp {
         createPlaylistButton.setPreferredSize(new Dimension(200, 40));
 
         // Frame Düzeni
-        frame.add(searchPanel, BorderLayout.NORTH);
-        frame.add(titleLabel, BorderLayout.CENTER);
-        frame.add(contentPanel, BorderLayout.CENTER);
-
+        frame.add(searchPanel);
+        //frame.add(titleLabel, BorderLayout);
+        frame.add(contentPanel);
+        frame.add(contentPanel2);
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(new Color(40, 0, 0));
         bottomPanel.add(createPlaylistButton);
-        frame.add(bottomPanel, BorderLayout.SOUTH);
+        frame.add(bottomPanel);
 
         frame.setVisible(true);
     }
