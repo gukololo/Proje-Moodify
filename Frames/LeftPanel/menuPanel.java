@@ -11,15 +11,16 @@ public class menuPanel extends JPanel{
     private JLabel menu;
     private JButton home;
     private JButton trends;
-    private JPanel panel;
 
     menuPanel(){
 
-        panel.setSize(366,111);
-        panel.setLayout(new GridLayout(3,1));
+        setSize(284,111);
+        setLayout(new GridLayout(3,1));
+        setBackground(Color.GREEN);
+
 
         menu = new JLabel("MENU");
-        panel.add(menu);
+        add(menu);
         home = new JButton("HOME");
         trends = new JButton("Trends");
 
@@ -37,8 +38,8 @@ public class menuPanel extends JPanel{
             }
         });
 
-        panel.add(home);
-        panel.add(trends);
+        add(home);
+        add(trends);
 
     }
     

@@ -8,7 +8,7 @@ public class MainFrameMiddlePart {
         
         JFrame frame = new JFrame("Moodlist");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 600);
+        frame.setSize(1320, 1080);
         frame.setLayout(new GridLayout(4,1));
         frame.getContentPane().setBackground(new Color(40, 0, 0)); 
 

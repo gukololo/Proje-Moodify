@@ -12,15 +12,16 @@ public class libraryPanel extends JPanel{
     private JButton playlists;
     private JButton likedSongs;
     private JButton favoriteArtists;
-    private JPanel panel;
+    
 
     libraryPanel(){
 
-        panel.setSize(366,148);
-        panel.setLayout(new GridLayout(4,1));
+        setSize(284,148);
+        setLayout(new GridLayout(4,1));
+        setBackground(Color.MAGENTA);
 
         library = new JLabel("LIBRARY");
-        panel.add(library);
+        add(library);
         playlists = new JButton("PLAYLISTS");
         likedSongs = new JButton("LIKED SONGS");
         favoriteArtists = new JButton("FAVORITE ARTISTS");
@@ -45,9 +46,9 @@ public class libraryPanel extends JPanel{
             }
         });
 
-        panel.add(playlists);
-        panel.add(likedSongs);
-        panel.add(favoriteArtists);
+        add(playlists);
+        add(likedSongs);
+        add(favoriteArtists);
 
 
     }

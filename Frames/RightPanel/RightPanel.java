@@ -21,7 +21,7 @@ public class RightPanel extends JPanel {
         statsPanel = new StatsPanel();
         recentPlaylistsPanel = new RecentPlaylistsPanel();
 
-        this.setSize(400, 1080);
+        this.setSize(300, 1080);
         this.setLayout(new GridLayout(3, 1));
 
        

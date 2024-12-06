@@ -14,27 +14,29 @@ public class leftPanel extends JPanel{
     private libraryPanel library;
     private generalPanel general;
     private JLabel moodify;
-    private JPanel panel;
-    private profile user;
+    // private profile user;
 
     public leftPanel(){
 
+        
         setBackground(Color.red);
-        panel.setSize(400,1080);
-        panel.setLayout(new GridLayout(5,1));
+        setSize(300,1080);
+        setLayout(new GridLayout(5,1));
+        setBackground(Color.RED);
+
 
         moodify = new JLabel("MOODIFY");
         menu = new menuPanel();
         library = new libraryPanel();
-        user = new profile();   
-        friends = new friendsPanel(user);
+        // user = new profile();   
+        friends = new friendsPanel();
         general = new generalPanel();
 
-        panel.add(moodify);
-        panel.add(menu);
-        panel.add(library);
-        panel.add(friends);
-        panel.add(general);
+        add(moodify);
+        add(menu);
+        add(library);
+        add(friends);
+        add(general);
 
 
     }

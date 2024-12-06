@@ -11,18 +11,20 @@ public class MainFrame extends JFrame {
     MainFrame(){
         setTitle("Main Page");
         setSize(1920,1080);
-        setLayout(new GridLayout(1,3));
+        setLayout(new BorderLayout());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel lp = new JPanel();
-        lp.setSize(400,1080);
+        JPanel lp = new leftPanel();
+        lp.setPreferredSize(new Dimension(300,1080));
         JPanel rp = new RightPanel();
+        rp.setPreferredSize(new Dimension(300,1080));
         JPanel mp = new JPanel();
+        mp.setSize(1520,1080);
         
 
-        add(lp);
-        add(mp);
-        add(rp);
+        add(lp, BorderLayout.WEST);
+        add(mp,BorderLayout.CENTER);
+        add(rp, BorderLayout.EAST);
 
     }
 

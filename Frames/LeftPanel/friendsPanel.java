@@ -3,25 +3,30 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import classes.profile;
+//import classes.profile;
 import java.awt.event.*;
 import java.awt.*;
 
 
 public class friendsPanel extends JPanel{
 
-    private ArrayList<profile> friendList;
+    private ArrayList<String> friendList;
     private JPanel cardsPanel; 
     private CardLayout cardLayout;
-    private JPanel mainPanel;
     private int friendsPerPage = 3;
 
-    friendsPanel(profile user){
+    friendsPanel(){
 
-        mainPanel.setSize(366,185);
+        setSize(284,185);
+        setBackground(Color.CYAN);
 
         friendList = new ArrayList<>();
-        friendList.add()
+        friendList.add("yarrak");
+        friendList.add("yarrak");
+        friendList.add("yarrak");
+        friendList.add("sik");
+        friendList.add("sik");
+        friendList.add("sik");
         cardLayout = new CardLayout();
         cardsPanel = new JPanel(cardLayout);
 
@@ -33,11 +38,11 @@ public class friendsPanel extends JPanel{
 
         createPages();
 
-        mainPanel = new JPanel(new GridLayout(2,1));
+        setLayout(new GridLayout(2,1));
 
         JPanel navigationPanel = createNavigationPanel();
-        mainPanel.add(cardsPanel);
-        mainPanel.add(navigationPanel);
+        add(cardsPanel);
+        add(navigationPanel);
 
     }
 
@@ -68,7 +73,8 @@ public class friendsPanel extends JPanel{
 
     private void createPages() {
 
-        int totalPages = (int) Math.ceil((double) friendList.size() / friendsPerPage);
+        // int totalPages = (int) Math.ceil((double) friendList.size() / friendsPerPage);
+        int totalPages = 2;
 
         for (int i = 0; i < totalPages; i++) {
 
@@ -82,7 +88,8 @@ public class friendsPanel extends JPanel{
 
             for (int j = start; j < end; j++) {
 
-                JButton friendButton = new JButton(friendList.get(j).getUserName());
+                //JButton friendButton = new JButton(friendList.get(j).getUserName());
+                JButton friendButton = new JButton(friendList.get(j));
                 page.add(friendButton);
 
             }

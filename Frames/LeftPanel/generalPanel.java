@@ -11,16 +11,17 @@ public class generalPanel extends JPanel{
     private JLabel general;
     private JButton settings;
     private JButton logOut;
-    private JPanel panel;
+    
 
     generalPanel(){
 
 
-        panel.setSize(366,111);
-        panel.setLayout(new GridLayout(3,1));
+        setSize(284,111);
+        setLayout(new GridLayout(3,1));
+        setBackground(Color.GRAY);
 
         general = new JLabel("MENU");
-        panel.add(general);
+        add(general);
         settings = new JButton("SETTINGS");
         logOut = new JButton("LOG OUT");
 
@@ -38,8 +39,8 @@ public class generalPanel extends JPanel{
             }
         });
 
-        panel.add(settings);
-        panel.add(logOut);
+        add(settings);
+        add(logOut);
 
     }
     
