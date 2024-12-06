@@ -7,7 +7,7 @@ public class PlayingSongPanel extends JPanel {
     PlayingSongPanel(){
 
         setBackground(Color.GREEN);
-        setSize(284,376);
+        setSize(284,360);
         setLayout(new GridLayout(6,1));
         add(new JLabel("Song Playing"));
         add(new JButton("müzik resmi"));
