@@ -21,6 +21,43 @@ public class Playlist {
     protected profile owner;
     protected ArrayList<song> songs;
 
+
+    // Finds the most common mood between all songs in the playlist.
+    public int findMainMood(){
+
+        Random random = new Random();
+        int max = 0;
+        ArrayList<Integer> mostFrequentMoods = new ArrayList<>();
+
+        for (int i = 0; i < songs.size(); i++) {
+
+            int currentMood = songs.get(i).getSongMood();
+            int count = 0;
+            for(int j = 0; j < songs.size(); j++) {
+                
+                if (currentMood == (songs.get(j).getSongMood())) {
+                    count++;
+                }
+            }
+            if (count > max) {
+                max = count;
+                mostFrequentMoods.clear();
+                mostFrequentMoods.add(currentMood);
+            }
+            else if (count == max && !mostFrequentMoods.contains(currentMood)) {
+                mostFrequentMoods.add(currentMood);
+            }
+        }
+
+        if (mostFrequentMoods.size() > 1) {
+            int select = random.nextInt(mostFrequentMoods.size());
+            return mostFrequentMoods.get(select);
+        }
+        else{
+            return mostFrequentMoods.get(0);
+        }
+    }
+
     // Finds the most common genre between all songs in the playlist.
     public String findMainGenre(){
 
