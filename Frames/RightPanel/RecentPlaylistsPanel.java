@@ -1,7 +1,6 @@
 package Frames.RightPanel;
 import classes.profile;
 import classes.Playlist;
-import java.awt.GridBagLayout;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -14,11 +13,12 @@ public class RecentPlaylistsPanel extends JPanel {
     private profile user;
     private ArrayList<Playlist> playlists;
 
-    public RecentPlaylistsPanel(profile user) {
+    public RecentPlaylistsPanel() {
+        setBackground(Color.red);
         this.setSize(284, 293);    
         setLayout(new GridLayout(4,3));
-        this.user = user;
-        playlists = this.user.getPlaylists();
+        //this.user = user;
+        //playlists = this.user.getPlaylists();
 
         
         JButton b1 = new JButton(); 

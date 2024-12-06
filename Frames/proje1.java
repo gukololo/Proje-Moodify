@@ -35,12 +35,14 @@ public class proje1 extends JFrame{
         centerPanel.add(secondPanel);
 
         centerPanel.add(thirdPanel);
+        
 
 
 
     }
     public static void main(String[] args) {
-        new proje1();
+        proje1 a = new proje1();
+        a.setVisible(true);
     }
 
 }

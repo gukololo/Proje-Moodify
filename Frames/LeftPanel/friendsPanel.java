@@ -1,5 +1,4 @@
 package Frames.LeftPanel;
-
 import java.util.ArrayList; 
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -22,14 +21,15 @@ public class friendsPanel extends JPanel{
         mainPanel.setSize(366,185);
 
         friendList = new ArrayList<>();
+        friendList.add()
         cardLayout = new CardLayout();
         cardsPanel = new JPanel(cardLayout);
 
-        for (int i = 0; i < user.getFollowers().size(); i++) {
+        // for (int i = 0; i < user.getFollowers().size(); i++) {
 
-            friendList.add(user.getFollowers().get(i));
+        //     friendList.add(user.getFollowers().get(i));
             
-        }
+        // }
 
         createPages();
 

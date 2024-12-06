@@ -17,8 +17,9 @@ public class leftPanel extends JPanel{
     private JPanel panel;
     private profile user;
 
-    leftPanel(){
+    public leftPanel(){
 
+        setBackground(Color.red);
         panel.setSize(400,1080);
         panel.setLayout(new GridLayout(5,1));
 

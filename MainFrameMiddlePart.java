@@ -2,10 +2,9 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class MoodListApp {
-   
+public class MainFrameMiddlePart {
 
-    MoodListApp() {
+    MainFrameMiddlePart() {
         
         JFrame frame = new JFrame("Moodlist");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
