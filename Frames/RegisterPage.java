@@ -1,3 +1,5 @@
+package Frames;
+
 import javax.swing.JFrame;
 
 public class RegisterPage extends JFrame {
