@@ -1,4 +1,4 @@
-package classes.Frames.LeftPanel;
+package Frames.LeftPanel;
 
 import java.util.ArrayList; 
 import javax.swing.JPanel;

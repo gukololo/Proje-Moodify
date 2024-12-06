@@ -1,4 +1,4 @@
-package classes.Frames.RightPanel;
+package Frames.RightPanel;
 import classes.profile;
 import classes.Playlist;
 

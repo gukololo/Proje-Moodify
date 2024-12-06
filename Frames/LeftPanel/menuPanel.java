@@ -1,4 +1,4 @@
-package classes.Frames.LeftPanel;
+package Frames.LeftPanel;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
