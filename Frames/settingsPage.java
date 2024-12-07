@@ -1,4 +1,5 @@
 package Frames;
+<<<<<<< Updated upstream
 import javax.imageio.plugins.jpeg.JPEGQTable;
 import javax.swing.*;
 import java.awt.*;
@@ -20,3 +21,11 @@ public class settingsPage extends JFrame {
     }
 
     
+=======
+
+import javax.swing.*;
+
+public class settingsPage extends JFrame{
+    
+}
+>>>>>>> Stashed changes
